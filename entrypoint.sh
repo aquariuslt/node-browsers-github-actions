@@ -2,4 +2,5 @@
 
 set -e
 
+yarn --version
 sh -c "yarn $*"
