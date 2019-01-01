@@ -14,7 +14,7 @@ action "Docker Lint" {
 }
 
 action "Build" {
-  needs = ["Shell Lint", "Test", "Docker Lint"]
+  needs = ["Shell Lint", "Docker Lint"]
   uses = "actions/docker/cli@master"
   args = "build -t npm ."
 }
@@ -22,7 +22,7 @@ action "Build" {
 action "Docker Tag" {
   needs = ["Build"]
   uses = "actions/docker/tag@master"
-  args = "npm github/npm --no-latest"
+  args = "yarn aquariuslt/yarn --no-latest"
 }
 
 action "Publish Filter" {
