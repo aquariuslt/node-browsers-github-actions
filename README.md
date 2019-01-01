@@ -9,6 +9,34 @@ yarn-only features such as `workspaces`
 
 You can use this repository using published yarn packages:
 
+### Use Github Repo Scheme (Recommend)
+
+```workflow
+workflow "Build and test on push" {
+  on = "push"
+  resolves = ["Unit Test"]
+}
+
+action "Install Dependencies" {
+  uses = "aquariuslt/github-actions-yarn@master"
+  runs = "yarn"
+  args = "install"
+}
+
+action "Unit Test" {
+  uses = "aquariuslt/github-actions-yarn@master"
+  needs = ["Install Dependencies"]
+  args = "test"
+  runs = "yarn"
+}
+
+```
+
+
+
+### Use `docker://` Scheme
+
+Sadly, I haven't see any success example on github official action repo `.workflow` file use this scheme.
 
 ```workflow
 workflow "Build and test on push" {
@@ -29,3 +57,6 @@ action "Unit Test" {
 
 
 
+## Example
+
+You can refer to [my blog repo actions](https://github.com/aquariuslt/blog/actions).
