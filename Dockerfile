@@ -1,4 +1,4 @@
-FROM node:10-slim
+FROM node:10
 
 ENV YARN_VERSION=v1.12.3
 LABEL version="v1.12.3"
