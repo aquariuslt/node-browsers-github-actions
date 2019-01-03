@@ -4,7 +4,7 @@ ENV YARN_VERSION=v1.12.3
 LABEL version="v1.12.3"
 LABEL repository="https://github.com/aquariuslt/github-actions-yarn"
 LABEL homepage="https://github.com/aquariuslt/github-actions-yarn"
-LABEL maintainer="Aquariuslt <superaquariuslt@gmailcom>"
+LABEL maintainer="Aquariuslt <superaquariuslt@gmail.com>"
 
 LABEL com.github.actions.name="GitHub Action for yarn"
 LABEL com.github.actions.description="Wraps the npm CLI and yarn to enable common yarn commands."
