@@ -1,10 +1,9 @@
-# Github Action for Yarn
-
+# Github Action for Yarn with Bundle Browsers Environment
 
 Use yarn as workflow actions to enable the repository which need to use 
 yarn-only features such as `workspaces`
 
-And with browsers environment support
+And with browsers environment support (Headless Chrome)
 
 
 ## Usage
@@ -35,7 +34,6 @@ action "Unit Test" {
 ```
 
 
-
 ### Use `docker://` Scheme
 
 Sadly, I haven't see any success example on github official action repo `.workflow` file use this scheme.
@@ -47,11 +45,11 @@ workflow "Build and test on push" {
 }
 
 action "Install Dependencies" {
-  uses = "docker://aquariuslt/yarn@master"
+  uses = "docker://aquariuslt/yarn-browsers@master"
 }
 
 action "Unit Test" {
-  uses = "docker://aquariuslt/yarn@master"
+  uses = "docker://aquariuslt/yarn-browsers@master"
   needs = ["Install Dependencies"]
   args = "test"
 }

@@ -6,18 +6,12 @@ LABEL repository="https://github.com/aquariuslt/github-actions-yarn"
 LABEL homepage="https://github.com/aquariuslt/github-actions-yarn"
 LABEL maintainer="Aquariuslt <superaquariuslt@gmail.com>"
 
-LABEL com.github.actions.name="GitHub Action for yarn"
+LABEL com.github.actions.name="GitHub Action for NPM with browser env"
 LABEL com.github.actions.description="Wraps the npm CLI and yarn to enable common yarn commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
 COPY LICENSE README.md /
 
-## Yarn installation
-RUN mkdir -p /opt
-ADD https://github.com/yarnpkg/yarn/releases/download/${YARN_VERSION}/yarn-${YARN_VERSION}.tar.gz /tmp/
-RUN tar -zxvf /tmp/yarn-${YARN_VERSION}.tar.gz -C /tmp/
-RUN mv /tmp/yarn-${YARN_VERSION}/ /opt/yarn
-ENV PATH "$PATH:/opt/yarn/bin"
 
 ## Browsers(Chrome) Environment Installation
 RUN apt-get update -y
