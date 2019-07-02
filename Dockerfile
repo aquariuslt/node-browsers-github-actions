@@ -1,15 +1,14 @@
 FROM node:10
 
-ENV YARN_VERSION=v1.16.0
-LABEL version="v1.16.0"
+LABEL version="v1.0.0"
 LABEL repository="https://github.com/aquariuslt/github-actions-yarn"
 LABEL homepage="https://github.com/aquariuslt/github-actions-yarn"
 LABEL maintainer="Aquariuslt <superaquariuslt@gmail.com>"
 
-LABEL com.github.actions.name="Yarn/NPM with browsers"
-LABEL com.github.actions.description="Wraps the npm CLI and yarn to enable common yarn commands."
+LABEL com.github.actions.name="node-10-browsers"
+LABEL com.github.actions.description="Wraps the npm CLI and yarn to enable common yarn commands with browsers environment"
 LABEL com.github.actions.icon="package"
-LABEL com.github.actions.color="red"
+LABEL com.github.actions.color="blue"
 COPY LICENSE README.md /
 
 

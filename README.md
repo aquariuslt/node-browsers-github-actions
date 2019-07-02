@@ -1,4 +1,4 @@
-# Github Action for Yarn with Bundle Browsers Environment
+# Github Action for Yarn/NPM with Bundled Browsers Environment
 
 Use yarn as workflow actions to enable the repository which need to use 
 yarn-only features such as `workspaces`
@@ -45,11 +45,11 @@ workflow "Build and test on push" {
 }
 
 action "Install Dependencies" {
-  uses = "docker://aquariuslt/yarn-browsers@master"
+  uses = "docker://aquariuslt/node-10-browsers@master"
 }
 
 action "Unit Test" {
-  uses = "docker://aquariuslt/yarn-browsers@master"
+  uses = "docker://aquariuslt/node-10-browsers@master"
   needs = ["Install Dependencies"]
   args = "test"
 }
