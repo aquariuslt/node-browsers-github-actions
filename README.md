@@ -10,7 +10,11 @@ And with browsers environment support (Headless Chrome)
 
 You can use this repository using published yarn packages:
 
-### Use Github Repo Scheme (Recommend)
+### Use Marketplace Alias (Recommend)
+
+
+
+### Use Github Repo Scheme 
 
 ```workflow
 workflow "Build and test on push" {
@@ -19,13 +23,13 @@ workflow "Build and test on push" {
 }
 
 action "Install Dependencies" {
-  uses = "aquariuslt/github-actions-yarn@master"
+  uses = "aquariuslt/node-browsers-github-actions@master"
   runs = "yarn"
   args = "install"
 }
 
 action "Unit Test" {
-  uses = "aquariuslt/github-actions-yarn@master"
+  uses = "aquariuslt/node-browsers-github-actions@master"
   needs = ["Install Dependencies"]
   args = "test"
   runs = "yarn"

@@ -16,13 +16,13 @@ action "Docker Lint" {
 action "Build" {
   needs = ["Shell Lint", "Docker Lint"]
   uses = "actions/docker/cli@master"
-  args = "build -t yarn ."
+  args = "build -t node-10-browsers ."
 }
 
 action "Docker Tag" {
   needs = ["Build"]
   uses = "actions/docker/tag@master"
-  args = "yarn aquariuslt/yarn-browsers --no-latest"
+  args = "node-10-browsers aquariuslt/node-10-browsers --no-latest"
 }
 
 action "Publish Filter" {
@@ -40,5 +40,5 @@ action "Docker Login" {
 action "Docker Publish" {
   needs = ["Docker Tag", "Docker Login"]
   uses = "actions/docker/cli@master"
-  args = "push aquariuslt/yarn-browsers"
+  args = "push aquariuslt/node-10-browsers"
 }
