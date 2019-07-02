@@ -6,7 +6,7 @@ LABEL repository="https://github.com/aquariuslt/github-actions-yarn"
 LABEL homepage="https://github.com/aquariuslt/github-actions-yarn"
 LABEL maintainer="Aquariuslt <superaquariuslt@gmail.com>"
 
-LABEL com.github.actions.name="GitHub Action for Yarn/NPM with browser env"
+LABEL com.github.actions.name="Yarn/NPM with browsers"
 LABEL com.github.actions.description="Wraps the npm CLI and yarn to enable common yarn commands."
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="red"
