@@ -69,5 +69,6 @@ ENV CHROME_BIN /usr/bin/google-chrome
 ENV CHROME_PATH /usr/bin/google-chrome
 
 COPY "entrypoint.sh" "/entrypoint.sh"
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["install"]
